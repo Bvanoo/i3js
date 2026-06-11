@@ -16,9 +16,11 @@
 
 // if(/*condition*/ nb > 55) {
 //     // instructions
-// } else if (/* autre condition */ nb < 12) {
+// } 
+// else if (/* autre condition */ nb < 12) {
 //     // autres instruction
-// } else {
+// } 
+// else {
 //     // encore d'autres instructions
 // }
 
@@ -26,3 +28,57 @@
 // let today = new Date();
 // console.log(today.getHours());
 
+// for i in range(0,50,1) 
+// for (let i = 0; i < 50; i++) {
+//     // repéter 50 fois qqs chose
+//     console.log(i)
+// }
+
+// let tableau = ['pommes', 'poires', 'bananes', 'peches'];
+
+// // for item in tableau 
+// for (let item of tableau) {
+//     console.log(item)
+// }
+
+// let obj = { nom: 'Khun', age: 44 }
+
+// // tres peu utilisée
+// for (let prop in obj) {
+//     console.log(prop) // nom -> age
+//     console.log(obj[prop]) // Khun -> 44
+// }
+
+// continuer = true
+// compteur = -1
+// while(continuer) {
+//     continuer = confirm('Voulez-vous continuer')
+//     compteur += 1
+// }
+
+// document.body.innerText = `Vous avez accepter ${compteur} fois`
+
+// creér un element html // document.createElement('nom de la balise')
+let p = document.createElement('p') // créer une balise <p></p>
+// modifier le texte de l'element
+p.innerText = 'Voici un super texte pour mon paragraphe 🍔'
+
+let s = document.createElement('span')
+s.innerText = 'Texte du span'
+
+let img = document.createElement('img')
+// modifier la source de l'image
+img.src = 'https://static.nationalgeographic.fr/files/styles/image_3200/public/nationalgeographic_1468962.webp?w=1600&h=900'
+
+// ajouter l'image au body
+document.body.append(img)
+
+// ajouter le span dans le paragraphe
+p.append(s)
+
+document.body.append(p)
+
+// retirer un element
+p.remove()
+
+document.body.append(p)
