@@ -1,0 +1,18 @@
+.big-image {
+    height: 250px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.thumbnails-container {
+    margin: auto;
+    display: flex;
+    img {
+        width: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    img.active {
+        transform: scale(1.1);
+    }
+}

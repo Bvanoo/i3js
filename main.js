@@ -59,26 +59,50 @@
 // document.body.innerText = `Vous avez accepter ${compteur} fois`
 
 // creér un element html // document.createElement('nom de la balise')
-let p = document.createElement('p') // créer une balise <p></p>
-// modifier le texte de l'element
-p.innerText = 'Voici un super texte pour mon paragraphe 🍔'
+// let p = document.createElement('p') // créer une balise <p></p>
+// // modifier le texte de l'element
+// p.innerText = 'Voici un super texte pour mon paragraphe 🍔'
 
-let s = document.createElement('span')
-s.innerText = 'Texte du span'
+// let s = document.createElement('span')
+// s.innerText = 'Texte du span'
 
-let img = document.createElement('img')
-// modifier la source de l'image
-img.src = 'https://static.nationalgeographic.fr/files/styles/image_3200/public/nationalgeographic_1468962.webp?w=1600&h=900'
+// let img = document.createElement('img')
+// // modifier la source de l'image
+// img.src = 'https://static.nationalgeographic.fr/files/styles/image_3200/public/nationalgeographic_1468962.webp?w=1600&h=900'
 
-// ajouter l'image au body
-document.body.append(img)
+// // ajouter l'image au body
+// document.body.append(img)
 
-// ajouter le span dans le paragraphe
-p.append(s)
+// // ajouter le span dans le paragraphe
+// p.append(s)
 
-document.body.append(p)
+// document.body.append(p)
 
-// retirer un element
-p.remove()
+// // retirer un element
+// p.remove()
 
-document.body.append(p)
+// document.body.append(p)
+
+// événements
+
+let btn = document.createElement('button')
+btn.innerText = 'click me'
+document.body.append(btn)
+
+
+// btn.addEventListener('click',() => {
+//     console.log('coucou')
+// })
+
+// function f () {
+//     console.log('cuicui')
+// }
+
+// btn.addEventListener('click', f)
+
+btn.onclick = () => {
+    console.log('coucou')
+}
+
+
+
