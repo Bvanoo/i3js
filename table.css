@@ -1,6 +1,7 @@
 #table-taches {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 5px 5px 10px 0 #ccc;
     tr.important {
         background-color: #d02b2b3b;
     }
@@ -9,16 +10,32 @@
         color: white;
     }
     th, td {
-        border: 1.3px solid black;
+        border: 1px solid black;
         text-align: left;
         padding: 5px 10px;
+        height: 30px;
     }
     .btn-supprimer {
-        border: 2px solid #d02b2b;
+        border: 2px solid #d63131;
         aspect-ratio: 1/1;
         padding: 5px;
         background-color: transparent;
         border-radius: 5px;
+        cursor: pointer;
         color: #d02b2b;
+        box-shadow: 2px 2px 2px 0 #ccc;
+        transition: 1s ease all;
+        transform: scale(1.05);
+    }
+
+    .btn-supprimer:active {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #ccc;
+    }
+
+    .btn-supprimer:hover {
+        transition: unset;
+        color: #aa1d1d;
+        border-color: #aa1d1d;
     }
 }
