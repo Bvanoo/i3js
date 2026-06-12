@@ -1,0 +1,24 @@
+#table-taches {
+    width: 100%;
+    border-collapse: collapse;
+    tr.important {
+        background-color: #d02b2b3b;
+    }
+    th {
+        background-color: rgb(76, 71, 162);
+        color: white;
+    }
+    th, td {
+        border: 1.3px solid black;
+        text-align: left;
+        padding: 5px 10px;
+    }
+    .btn-supprimer {
+        border: 2px solid #d02b2b;
+        aspect-ratio: 1/1;
+        padding: 5px;
+        background-color: transparent;
+        border-radius: 5px;
+        color: #d02b2b;
+    }
+}
