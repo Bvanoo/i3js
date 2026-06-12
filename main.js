@@ -85,24 +85,98 @@
 
 // événements
 
-let btn = document.createElement('button')
-btn.innerText = 'click me'
-document.body.append(btn)
+// let btn = document.createElement('button')
+// btn.innerText = 'click me'
+// document.body.append(btn)
 
 
-// btn.addEventListener('click',() => {
-//     console.log('coucou')
-// })
+// // btn.addEventListener('click',() => {
+// //     console.log('coucou')
+// // })
 
-// function f () {
-//     console.log('cuicui')
+// // function f () {
+// //     console.log('cuicui')
+// // }
+
+// // btn.addEventListener('click', f)
+
+// // btn.onclick = () => {
+// //     console.log('coucou')
+// // }
+
+// let today = new Date()
+
+// let jour = today.getDay()
+
+// console.log(jour)
+
+// if(jour == 0) {
+//     console.log('Dimanche')
+// } else if(jour == 1) {
+//     console.log('Lundi')
+// } else if(jour == 5) {
+//     console.log('Vendredi')
+// } else {
+//     console.log('!!!!')
 // }
 
-// btn.addEventListener('click', f)
+// switch (jour) {
+//     case 0:
+//         console.log('Dimanche')
+//         break;
+//     case 1:
+//         console.log('Lundi')
+//         break
+//     case 5:
+//         console.log('Vendredi')
+//         break
+
+//     default:
+//         console.log('Ce jour n\'existe pas')
+//         break;
+// }
+
+
+// let age = 17
+// // operateur ternaire
+// console.log(age >= 18 ? 'Majeur' : 'Mineur')
+
+
+// let t = ['php', 'c#', 'python']
+
+// for(let item of t){
+//     console.log(item)
+// }
+
+// t.forEach(item => {
+//     console.log(item)
+// })
+
+// const btn = document.getElementById('btn')
+// // const btn = document.querySelector('#btn')
+// const p = document.getElementById('p')
+
+// btn.onclick = () => {
+//     p.classList.toggle('big')
+//     // if(p.classList.contains('big')) {
+//     //     p.classList.remove('big')
+//     // } else {
+//     //     p.classList.add('big')
+//     // }
+// }
+
+const btn = document.getElementById('btn5')
+const autrebtn = document.getElementById('btn4')
+const div1 = document.getElementById('div1')
+const div2 = document.getElementById('div2')
+
+const image = document.createElement('img')
+image.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Red_Squirrel_-_Lazienki.JPG/330px-Red_Squirrel_-_Lazienki.JPG'
+div1.append(image)
 
 btn.onclick = () => {
-    console.log('coucou')
+    div2.append(image)
 }
-
-
-
+autrebtn.onclick = () => {
+    div1.append(image)
+}
