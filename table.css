@@ -3,7 +3,18 @@
     border-collapse: collapse;
     box-shadow: 5px 5px 10px 0 #ccc;
     tr.important {
-        background-color: #d02b2b3b;
+        /* background-color: #d02b2b3b; */
+        position: relative;
+    }
+    tr.important ::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 2px dotted red;
+        transform: scaleX(1.01) scaleY(1.05);
+        top: -2px;
+        left: -2px;
     }
     th {
         background-color: rgb(76, 71, 162);
