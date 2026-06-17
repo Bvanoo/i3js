@@ -1,0 +1,110 @@
+/* Police globale appliquée à toute la page */
+*{
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* Titre centré au-dessus de la calculatrice */
+h1{
+    text-align: center;
+}
+
+/* Zone principale qui aligne les blocs de la page */
+main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Conteneur principal de la calculatrice */
+.calculatrice{
+    background-color: #270808;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    margin-top: auto;
+    border: 3px solid black;
+    border-radius: 11px;
+}
+
+/* Zone d'affichage en haut de la calculatrice */
+.screen{
+    display: flex;
+    background-color: rgba(87, 76, 76, 0.7);
+    height: 20%;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    border-bottom: 2px solid black;
+
+    /* Texte affiché dans l'écran */
+    #calcScreen{
+        color : white;
+        margin: 15px, 15px, 40px, 15px;
+        padding: 15px;
+        font-size: 2Rem;
+    }
+}
+
+/* Grille des touches numériques et opérateurs */
+.pave{
+    display: flex;
+    flex-direction: column; 
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+
+    /* Chaque ligne de touches */
+    .line1, .line2, .line3, .line4, .line5, .line6{
+        display: flex;
+        flex-flow: row wrap;
+        height: 20%;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Style commun à toutes les touches */
+.case{
+    font-size: 2Rem;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, .7);
+    border: none;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(200,200,200);
+    width: 22%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Effet au survol des touches */
+.case:hover{
+    background-color: rgba(30, 9, 107, 0.7);
+}
+
+/* Style des touches opérateurs */
+.ope{
+    background-color: rgb(255, 94, 0);
+}
+
+/* Style de la touche suppression */
+.del{
+    background-color: red; 
+}
+
+/* Bloc latéral d'informations */
+.historique{
+    width: 15%;
+
+    /* Texte du panneau latéral */
+    p{
+        display: flex;
+        padding: 10px;
+        overflow-x: auto;
+    }
+}

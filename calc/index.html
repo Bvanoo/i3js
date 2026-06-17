@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr-Be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premiere calculatrice réalisée pendant mon apprentissage du Javascript.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calculatrice en Javascript</title>
+</head>
+
+<body>
+    <h1>Calculatrice simple.</h1>
+    <main>
+        <div class="calculatrice">
+            <div class="screen">
+                <p id="calcScreen">ex : 4+4=8</p>
+            </div>
+            <div class="pave">
+                <div class="line1">
+                    <button class="case , ope" data-value="**">x²</button>
+                    <button class="case , ope" data-value="%">%</button>
+                    <button class="case , ope" data-value="C">CE</button>
+                    <button class="case , del" data-value="del"><i class="fa fa-delete-left"></i></button>
+                </div>
+                <div class="line2">
+                    <button class="case , ope" data-value="1/">1/x</button>
+                    <button class="case , ope" data-value="(">(</button>
+                    <button class="case , ope" data-value=")">)</button>
+                    <button class="case , ope" data-value="/">/</button>
+                </div>
+                <div class="line3">
+                    <button class="case" data-value="7">7</button>
+                    <button class="case" data-value="8">8</button>
+                    <button class="case" data-value="9">9</button>
+                    <button class="case , ope" data-value="*">X</button>
+                </div>
+                <div class="line4">
+                    <button class="case" data-value="4">4</button>
+                    <button class="case" data-value="5">5</button>
+                    <button class="case" data-value="6">6</button>
+                    <button class="case , ope" data-value="-">-</button>
+                </div>
+                <div class="line5">
+                    <button class="case" data-value="1">1</button>
+                    <button class="case" data-value="2">2</button>
+                    <button class="case" data-value="3">3</button>
+                    <button class="case , ope" data-value="+">+</button>
+                </div>
+                <div class="line6">
+                    <button class="case , ope" data-value="switch">+/-</button>
+                    <button class="case" data-value="0">0</button>
+                    <button class="case , ope" data-value=".">,</button>
+                    <button class="case , ope" data-value="=">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="historique">
+            <p>Calcul effectuer : </p>
+            <p id="repCalc" value="inputUser"></p>
+        </div>
+    </main>
+    <script src="calc.js"></script>
+</body>
+
+</html>
