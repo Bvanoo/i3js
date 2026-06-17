@@ -73,6 +73,7 @@ btnSortAsc.onclick = () => sortTasks("asc");
 btnSortDesc.onclick = () => sortTasks("desc");
 
 
+
 function createRow(exemple){
     const row = document.createElement('tr');
     const tdName = document.createElement('td');
