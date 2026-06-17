@@ -39,24 +39,41 @@ btnAdd.onclick = () => {
 }   
 
 // BONUS TRIS remplacer plus tard par une seule fonction
-btnSortAsc.onclick = () => {
-    tasks.sort((t1, t2) => t1.date - t2.date);
-    tbodyTable.innerHTML = '';
-    for (const t of tasks) {
-        tbodyTable.append(createRow(t))
-    }
-}
+// btnSortAsc.onclick = () => {
+//     tasks.sort((t1, t2) => t1.date - t2.date);
+//     tbodyTable.innerHTML = '';
+//     for (const t of tasks) {
+//         tbodyTable.append(createRow(t))
+//     }
+// }
 
-btnSortDesc.onclick = () => {
+// btnSortDesc.onclick = () => {
     
-    tasks.sort((t1, t2) => t2.date - t1.date);
+//     tasks.sort((t1, t2) => t2.date - t1.date);
+//     tbodyTable.innerHTML = '';
+//     for (const t of tasks) {
+//         tbodyTable.append(createRow(t))
+//     }
+// }
+
+
+function sortTasks(way){
+    if(way === "asc"){
+        tasks.sort((t1, t2) => t1.date - t2.date);
+    }else{
+        tasks.sort((t1,t2) => t2.date - t1.date);
+    }
     tbodyTable.innerHTML = '';
     for (const t of tasks) {
         tbodyTable.append(createRow(t))
     }
 }
 
-function createRow(task){
+btnSortAsc.onclick = () => sortTasks("asc");
+btnSortDesc.onclick = () => sortTasks("desc");
+
+
+function createRow(exemple){
     const row = document.createElement('tr');
     const tdName = document.createElement('td');
     const tdDev = document.createElement('td');
@@ -68,12 +85,12 @@ function createRow(task){
     const trashIcon = document.createElement('i');
 
     // utile pour le style -> voir css
-    if(task.important) 
+    if(exemple.important) 
         row.classList.add('important');
     
-    tdName.innerText = task.name;
-    tdDev.innerText = task.dev;
-    tdDate.innerText = task.date.toLocaleDateString();
+    tdName.innerText = exemple.name;
+    tdDev.innerText = exemple.dev;
+    tdDate.innerText = exemple.date.toLocaleDateString();
 
     // BONUS
     // uniquement utile pour le style
@@ -85,7 +102,7 @@ function createRow(task){
 
         // BONUS sera utile pour les tris
         // retirer de la liste des taches
-        tasks.splice(tasks.indexOf(task), 1);
+        tasks.splice(tasks.indexOf(exemple), 1);
     }
 
     // on imbrique ensuite tous les éléments
